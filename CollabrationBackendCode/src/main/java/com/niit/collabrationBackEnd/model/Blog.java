@@ -1,66 +1,84 @@
 package com.niit.collabrationBackEnd.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
 @Entity
-@Table(name="C_BLOG")
 @Component
 public class Blog {
-	
-	@Id
-	private String id;
-	
-	private String Title;
-	
-	private String User_id;
-	
-	private String Date_time;
-	
-	private String Reason ;
-	
-	private String Description;
-	
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	public String getTitle() {
-		return Title;
-	}
-	public void setTitle(String title) {
-		Title = title;
-	}
-	public String getUser_id() {
-		return User_id;
-	}
-	public void setUser_id(String user_id) {
-		User_id = user_id;
-	}
-	public String getDate_time() {
-		return Date_time;
-	}
-	public void setDate_time(String date_time) {
-		Date_time = date_time;
-	}
-	public String getReason() {
-		return Reason;
-	}
-	public void setReason(String reason) {
-		Reason = reason;
-	}
-	public String getDescription() {
-		return Description;
-	}
-	public void setDescription(String description) {
-		Description = description;
-	}
-	
-	
+		@Id
+	    private String blogId;
+		
+		private String title;
+		
+		private int usersID;
+		
+	    private String content;
+	    
+		private String category;
+		
+		private int approved;
+		
+		private String blogCreationDate;
+		
+		
+		public String getBlogCreationDate() {
+			return blogCreationDate;
+		}
 
+		public void setBlogCreationDate(String blogCreationDate) {
+			this.blogCreationDate = blogCreationDate;
+		}
+
+		public int getApproved() {
+			return approved;
+		}
+
+		public int isApproved() {
+			return approved;
+		}
+
+		public void setApproved(int approved) {
+			this.approved = approved;
+		}
+
+		public int getUsersID() {
+			return usersID;
+		}
+
+		public void setUsersID(int usersID) {
+			this.usersID = usersID;
+		}
+
+		public String getCategory() {
+			return category;
+		}
+
+		public void setCategory(String category) {
+			this.category = category;
+		}
+
+		public String getBlogId() {
+			return blogId;
+		}
+		public void setBlogId(String blogId) {
+			this.blogId = blogId;
+		}
+		public String getTitle() {
+			return title;
+		}
+		public void setTitle(String title) {
+			this.title = title;
+		}
+		
+		public String getContent() {
+			return content;
+		}
+		public void setContent(String content) {
+			this.content = content;
+		}
 }
